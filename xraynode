@@ -1,0 +1,23 @@
+proxies:
+  - name: "My-Xray-Node"
+    type: vless
+    server: 121.123.59.70
+    port: 443
+    uuid: 36f1f24a-3b39-4442-b98a-10e11e2dada0
+    tls: true
+    servername: 121.123.59.70
+    udp: true
+    network: ws
+    ws-opts:
+      path: /ws
+
+proxy-groups:
+  - name: "🚀 选择节点"
+    type: select
+    proxies:
+      - "My-Xray-Node"
+      - DIRECT
+
+rules:
+  - GEOIP,CN,DIRECT
+  - MATCH,🚀 选择节点
