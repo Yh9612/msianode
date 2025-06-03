@@ -2,7 +2,7 @@ proxies:
   - name: "My-Xray-Node"
     type: vless
     server: 121.123.59.70
-    port: 8443
+    port: 443
     uuid: 73163c4f-c807-4664-b6d2-2605a7b591f7
     tls: true
     servername: 121.123.59.70
