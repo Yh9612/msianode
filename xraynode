@@ -6,6 +6,7 @@ proxies:
     uuid: 36f1f24a-3b39-4442-b98a-10e11e2dada0
     tls: true
     servername: 121.123.59.70
+    skip-cert-verify: true
     network: ws
     ws-opts:
       path: /ws
