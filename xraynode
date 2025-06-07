@@ -35,6 +35,11 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,tiktok,🚀 选择节点
+  # TikTok走直连
+  - RULE-SET,tiktok,DIRECT
+  - DOMAIN-SUFFIX,tiktokcdn.com,DIRECT
+  - DOMAIN-SUFFIX,tiktok.com,DIRECT
+  - DOMAIN-KEYWORD,tiktok,DIRECT
+  # 其他规则
   - GEOIP,CN,DIRECT
   - MATCH,🚀 选择节点
