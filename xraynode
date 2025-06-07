@@ -26,6 +26,20 @@ proxy-groups:
       - "My-Xray-Node"
       - DIRECT
 
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:53
+  enhanced-mode: redir-host
+  nameserver:
+    - 223.5.5.5
+    - 1.1.1.1
+  fallback:
+    - 8.8.8.8
+    - 9.9.9.9
+  fallback-filter:
+    geoip: true
+
 rule-providers:
   tiktok:
     type: http
@@ -35,11 +49,9 @@ rule-providers:
     interval: 86400
 
 rules:
-  # TikTok走直连
   - RULE-SET,tiktok,DIRECT
   - DOMAIN-SUFFIX,tiktokcdn.com,DIRECT
   - DOMAIN-SUFFIX,tiktok.com,DIRECT
   - DOMAIN-KEYWORD,tiktok,DIRECT
-  # 其他规则
   - GEOIP,CN,DIRECT
   - MATCH,🚀 选择节点
