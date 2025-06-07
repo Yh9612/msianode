@@ -30,7 +30,7 @@ rule-providers:
   tiktok:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_tiktok.yaml"
+    url: "https://raw.githubusercontent.com/Yh9612/open_clash/main/rule-providers/tiktok.yaml"
     path: ./rule_providers/tiktok.yaml
     interval: 86400
 
