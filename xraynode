@@ -1,3 +1,10 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+secret: ""
+
 proxies:
   - name: "My-Xray-Node"
     type: vless
@@ -19,6 +26,15 @@ proxy-groups:
       - "My-Xray-Node"
       - DIRECT
 
+rule-providers:
+  tiktok:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/malikshi/open_clash/main/rule_provider/rule_tiktok.yaml"
+    path: ./rule_providers/tiktok.yaml
+    interval: 86400
+
 rules:
+  - RULE-SET,tiktok,🚀 选择节点
   - GEOIP,CN,DIRECT
   - MATCH,🚀 选择节点
