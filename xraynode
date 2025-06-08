@@ -27,7 +27,6 @@ proxy-groups:
       - DIRECT
 
 dns:
-  dns:
   enable: true
   listen: 0.0.0.0:53
   ipv6: false
