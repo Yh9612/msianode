@@ -32,11 +32,11 @@ dns:
   listen: 0.0.0.0:53
   enhanced-mode: redir-host
   nameserver:
-    - 223.5.5.5
     - 1.1.1.1
-  fallback:
     - 8.8.8.8
-    - 9.9.9.9
+  fallback:
+    - 1.0.0.1
+    - 8.8.4.4
   fallback-filter:
     geoip: true
 
