@@ -12,7 +12,7 @@ proxies:
     port: 443
     uuid: 73163c4f-c807-4664-b6d2-2605a7b591f7
     tls: true
-    servername: 121.123.59.70
+    servername: 121.123.59.70  # 如果有域名建议填域名
     skip-cert-verify: true
     network: ws
     ws-opts:
@@ -55,13 +55,12 @@ rule-providers:
     interval: 86400
 
 rules:
-  - RULE-SET,tiktok,DIRECT
-  - DOMAIN-SUFFIX,tiktokcdn.com,DIRECT
-  - DOMAIN-SUFFIX,tiktok.com,DIRECT
-  - DOMAIN-KEYWORD,tiktok,DIRECT
+  - RULE-SET,tiktok,🚀 选择节点
+  - DOMAIN-SUFFIX,tiktokcdn.com,🚀 选择节点
+  - DOMAIN-SUFFIX,tiktok.com,🚀 选择节点
+  - DOMAIN-KEYWORD,tiktok,🚀 选择节点
   - GEOIP,CN,DIRECT
   - MATCH,🚀 选择节点
-  - RULE-SET,tiktok,My-Xray-Node
 
 tun:
   enable: true
